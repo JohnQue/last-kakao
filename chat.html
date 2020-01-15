@@ -4,41 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Chat | Kakao Clone</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Lee Ji-Eun | Kakao Clone</title>
   </head>
-  <body>
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span class="status-bar__clock">13:54</span>
+  <body class="chats-body">
+    <div class="header-wrapper">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span class="status-bar__clock">13:54</span>
+        </div>
+        <div class="status-bar__column">
+          <i class="fas fa-clock"></i>
+          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-wifi"></i>
+          <span class="status-bar__battery-level">100%</span>
+          <i class="fas fa-battery-full"></i>
+        </div>
       </div>
-      <div class="status-bar__column">
-        <i class="fas fa-clock"></i>
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-wifi"></i>
-        <span class="status-bar__battery-level">100%</span>
-        <i class="fas fa-battery-full"></i>
-      </div>
+      <header class="header">
+        <div class="header__header-column">
+          <a href="index.html" class="header__back-btn">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+          <h1 class="header__title">Lee Ji-Eun</h1>
+        </div>
+        <div class="header__header-column">
+          <span class="header__icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header__icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+      </header>
     </div>
-    <header class="header">
-      <div class="header__header-column">
-        <a href="index.html" class="header__back-btn">
-          <i class="fas fa-arrow-left fa-2x"></i>
-        </a>
-        <h1 class="header__title">Lee Ji-Eun</h1>
-      </div>
-      <div class="header__header-column">
-        <span class="header__icon">
-          <i class="fas fa-search"></i>
-        </span>
-        <span class="header__icon">
-          <i class="fas fa-bars"></i>
-        </span>
-      </div>
-    </header>
-    <main class="chat">
+    <main class="chat-screen">
       <div class="chat__messages">
         <span class="chat__timestamp">Friday, January 11, 2019</span>
-        <li class="incoming-message message">
+        <div class="incoming-message message">
           <img
             src="images/IU2.jpg"
             alt="profile"
@@ -46,30 +49,69 @@
           />
           <div class="message__content">
             <span class="message__sender">Lee Ji-Eun</span>
-            <div class="message__bubble">I love you!</div>
+            <span class="message__bubble">I love you!</span>
           </div>
-          <div class="message__timestamp"></div>
-        </li>
-        <li class="incoming-message message">
-          <div class="message__timestamp"></div>
+          <div class="message__timestamp">10:13</div>
+        </div>
+        <div class="sent-message message">
+          <div class="message__timestamp">10:14</div>
           <div class="message__content">
-            <div class="message__bubble">I love you too!</div>
+            <span class="message__bubble">I love you too!</span>
           </div>
-        </li>
+        </div>
+        <div class="incoming-message message">
+          <img
+            src="images/IU2.jpg"
+            alt="profile"
+            class="g-avatar message__avatar"
+          />
+          <div class="message__content">
+            <span class="message__sender">Lee Ji-Eun</span>
+            <span class="message__bubble">I love you more!</span>
+          </div>
+          <div class="message__timestamp">10:15</div>
+        </div>
+        <div class="sent-message message">
+          <div class="message__timestamp">10:18</div>
+          <div class="message__content">
+            <span class="message__bubble">I love you and I miss you!</span>
+          </div>
+        </div>
+        <div class="incoming-message message">
+          <img
+            src="images/IU2.jpg"
+            alt="profile"
+            class="g-avatar message__avatar"
+          />
+          <div class="message__content">
+            <span class="message__sender">Lee Ji-Eun</span>
+            <span class="message__bubble">I want to see you right now!</span>
+          </div>
+          <div class="message__timestamp">10:30</div>
+        </div>
+        <div class="sent-message message first-message">
+          <div class="message__content">
+            <span class="message__bubble">So do I!</span>
+          </div>
+        </div>
+        <div class="sent-message message">
+          <div class="message__timestamp">10:35</div>
+          <div class="message__content second-message">
+              <span class="message__bubble">Can I go to see you now?</span>
+          </div>
+        </div>
       </div>
     </main>
-    <div class="chat__write">
-      <div class="chat__write-column">
+    <div class="chat__write-container">
+      <input
+        type="text"
+        placeholder="Send a message"
+        class="chat__write"
+      />
+      <div class="chat__icon-left chat__icon">
         <i class="far fa-plus-square"></i>
       </div>
-      <div class="chat__write-column">
-        <input
-          type="text"
-          placeholder="Send a message"
-          class="chat__write-input"
-        />
-      </div>
-      <div class="chat__write-column">
+      <div class="chat__icon-right chat__icon"">
         <span class="chat__write-icon">
           <i class="far fa-smile-wink"></i>
         </span>
@@ -77,6 +119,9 @@
           <i class="fas fa-microphone"></i>
         </span>
       </div>
+    </div>
+    <div class="bigScreen">
+      <div class="bigScreen__text">Please make your screen small!</div>
     </div>
     <script
       src="https://kit.fontawesome.com/bee4204144.js"

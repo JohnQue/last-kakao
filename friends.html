@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Friends | Kakao Clone</title>
   </head>
   <body>
@@ -34,7 +35,7 @@
     </header>
     <main class="friends">
       <header class="friends__header">
-        <div class="friends__friend friend friend--lg">
+        <div class="friends__friend friend">
           <div class="friend__column">
             <img
               src="images/IU2.jpg"
@@ -52,11 +53,7 @@
         <h5 class="friends__title">Plus Friend</h5>
         <div class="friends__friend friend">
           <div class="friend__column">
-            <img
-              src="images/IU2.jpg"
-              alt="profile"
-              class="g-avatar friend__avatar"
-            />
+            <img src="images/IU2.jpg" alt="profile" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">Plus Friend</span>
             </div>
@@ -67,11 +64,7 @@
         <h5 class="friends__title">Friends 14</h5>
         <li class="friends__friend friend friend--lg">
           <div class="friend__column">
-            <img
-              src="images/IU2.jpg"
-              alt="profile"
-              class="g-avatar friend__avatar"
-            />
+            <img src="images/IU2.jpg" alt="profile" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">Lee Ji-Eun</span>
               <span class="friend__status">Listen to Blueming!</span>
@@ -79,8 +72,10 @@
           </div>
           <div class="friend__column">
             <div class="friend__now-listening">
-              <span>Blueming - IU</span>
-              <i class="fas fa-play"></i>
+              <span>
+                Blueming - IU
+                <i class="fas fa-play"></i>
+              </span>
             </div>
           </div>
         </li>
@@ -95,6 +90,7 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
             <i class="far fa-comment"></i>
           </a>
         </li>
@@ -114,5 +110,8 @@
       src="https://kit.fontawesome.com/bee4204144.js"
       crossorigin="anonymous"
     ></script>
+    <div class="bigScreen">
+      <div class="bigScreen__text">Please make your screen small!</div>
+    </div>
   </body>
 </html>

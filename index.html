@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Chat | Kakao Clone</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Chats | Kakao Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -41,20 +42,21 @@
           <a href="chat.html">
             <!-- chat means we start using chat tag from now! -->
             <!-- change parent name to chat -->
-            <div class="chat__column">
-              <img
-                class="chat__avatar g-avatar"
-                src="./images/IU2.jpg"
-                alt="profile"
-              />
-              <!-- g-avatar influences all files of website -->
-              <div class="chat__content">
-                <span class="chat__username">IU</span>
-                <span class="chat__preview">Going home!</span>
+            <div class="chats__chat friend friend--lg">
+              <div class="friend__column">
+                <img
+                  src="images/IU2.jpg"
+                  alt="profile"
+                  class="m-avatar friend__avatar"
+                />
+                <div class="friend__content">
+                  <span class="friend__name">Lee Ji-Eun</span>
+                  <span class="friend__bottom-text">Where are you?</span>
+                </div>
               </div>
-            </div>
-            <div class="chat__column">
-              <div class="chat__timestamp">Yesterday</div>
+              <div class="friend__column">
+                <span class="chat__timestamp">March 8</span>
+              </div>
             </div>
           </a>
         </li>
@@ -69,6 +71,7 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
             <i class="fas fa-comment"></i>
           </a>
         </li>
@@ -84,9 +87,15 @@
         </li>
       </ul>
     </nav>
+    <div class="bigScreen">
+      <div class="bigScreen__text">Please make your screen small!</div>
+    </div>
     <script
       src="https://kit.fontawesome.com/bee4204144.js"
       crossorigin="anonymous"
     ></script>
+    <div class="bigScreen">
+      <div class="bigScreen__text">Please make your screen small!</div>
+    </div>
   </body>
 </html>
