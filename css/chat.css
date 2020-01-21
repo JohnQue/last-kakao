@@ -48,19 +48,18 @@
 
 @keyframes float {
   0% {
-    transform: translateY(none);
     box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
       0 18px 36px -18px rgba(0, 0, 0, 0.3),
       0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   }
+
   50% {
-    transform: translateY(-110px);
     box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
       0 18px 36px -18px rgba(0, 0, 0, 0.3),
       0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   }
+
   100% {
-    transform: translateY(none);
     box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
       0 18px 36px -18px rgba(0, 0, 0, 0.3),
       0 -12px 36px -8px rgba(0, 0, 0, 0.025);
@@ -68,15 +67,15 @@
 }
 
 .chat__write {
+  margin: 0 auto;
   bottom: 0px;
-  width: 100%;
   font-weight: bold;
   border-radius: 0;
-  margin: 0 auto;
   padding: 20px 60px;
+  width: 100%;
   border: none;
   font-size: 14px;
-  transition: all 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .chat__write:focus {
@@ -89,12 +88,17 @@
   animation: float 2s 0.5s linear infinite forwards;
 }
 
+.chat__write:focus::after {
+  content: '';
+  transform: translateY(-100px);
+}
+
 .chat__icon {
   font-size: 18px;
   transition: opacity 0.3s ease-in-out;
 }
 
-.chat__write:focus ~ .chat__icon {
+.chat__write:focus~.chat__icon {
   opacity: 0;
 }
 
@@ -195,6 +199,7 @@
   from {
     transform: none;
   }
+
   to {
     transform: rotateY(1turn);
   }
@@ -205,6 +210,7 @@
     opacity: 0;
     transform: translateX(-200px);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -216,6 +222,7 @@
     opacity: 0;
     transform: translateX(200px);
   }
+
   to {
     opacity: 1;
     transform: none;
